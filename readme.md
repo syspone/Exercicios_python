@@ -1,6 +1,6 @@
 # Exercícios em Python
 
-Este projeto contém exercícios em Python. Cada exercício fica em um arquivo `ex<NÚMERO>.py` (por exemplo: `ex1.py`, `ex2.py`, etc.). A execução é feita sempre pelo **runner**, digitando o número do exercício.
+Este projeto contém exercícios em Python. A execução é feita sempre pelo **runner**, que identifica automaticamente os números nos nomes dos arquivos e permite executar apenas digitando o número do exercício.
 
 ---
 
@@ -24,27 +24,57 @@ Quando aparecer a mensagem:
 Digite o número do exercício:
 ```
 
-digite o número do exercício desejado (ex.: **1** para o exercício 1) e pressione **Enter**.
+Você pode:
 
-O script executará o arquivo correspondente (`ex1.py`, `ex2.py`, etc.).
+- **Digitar apenas o número**: `1`, `2`, `3` (o runner encontra automaticamente arquivos como `ex1.py`, `formatacao2.py`, `exercicio3.py`, etc.)
+- **Digitar o nome completo do arquivo**: `ex1.py`, `formatacao2.py` (com ou sem extensão `.py`)
 
-### 3. Sair do programa
+O runner identifica números nos nomes dos arquivos. Por exemplo:
+- Digitar **`1`** executa arquivos como `ex1.py`, `exercicio1.py`, `teste1.py`
+- Digitar **`2`** executa arquivos como `ex2.py`, `formatacao2.py`, `aula2.py`
 
-Para encerrar o runner, digite uma das opções e pressione Enter:
+**Importante:** O runner busca o número exato. Por exemplo, digitar `1` encontra `ex1.py` mas **não** encontra `ex10.py` ou `ex11.py`.
 
-- `sair`
-- `q`
-- `quit`
-- `exit`
+Pressione **Enter** para executar.
+
+### 3. Comandos especiais
+
+O runner possui alguns comandos úteis:
+
+- **`listar`**, **`ls`** ou **`list`**: Lista todos os arquivos Python disponíveis na pasta
+- **`sair`**, **`q`**, **`quit`** ou **`exit`**: Encerra o programa
+
+---
+
+## Exemplos de uso
+
+```
+Digite o número do exercício: 1
+=== Executando ex1.py ===
+Hello, World!
+
+Digite o número do exercício: 2
+=== Executando formatacao2.py ===
+...
+
+Digite o número do exercício: listar
+Arquivos Python disponíveis:
+  - ex1.py
+  - formatacao2.py
+
+Digite o número do exercício: sair
+Encerrando.
+```
 
 ---
 
 ## Resumo
 
-| Ação              | Comando / Comportamento                          |
-|-------------------|---------------------------------------------------|
-| Iniciar o runner  | `python3 run_exercicios.py`                       |
-| Rodar exercício   | Digitar o número (1, 2, 3, …) e Enter             |
-| Encerrar          | Digitar `sair`, `q`, `quit` ou `exit` e Enter    |
+| Ação              | Comando / Comportamento                                    |
+|-------------------|------------------------------------------------------------|
+| Iniciar o runner  | `python3 run_exercicios.py`                                |
+| Rodar exercício   | Digitar o número (1, 2, 3...) ou nome do arquivo e Enter  |
+| Listar arquivos   | Digitar `listar`, `ls` ou `list` e Enter                   |
+| Encerrar          | Digitar `sair`, `q`, `quit` ou `exit` e Enter              |
 
-**Importante:** não execute os arquivos `ex1.py`, `ex2.py`, etc. diretamente. Use sempre o `run_exercicios.py` e, quando solicitado, informe o número do exercício.
+**Importante:** não execute os arquivos Python diretamente. Use sempre o `run_exercicios.py` e, quando solicitado, digite o número do exercício ou o nome do arquivo que deseja executar.
